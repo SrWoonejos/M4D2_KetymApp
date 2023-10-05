@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KetymApp_M4D2</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="textView1">¡Welcome!</string>
+    <string name="textView2">Suscribete</string>
+</resources>
