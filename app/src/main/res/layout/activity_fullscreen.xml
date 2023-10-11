@@ -1,59 +1,51 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullscreenContent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/fullscreenBackgroundColor"
+    android:background="@color/deep_purple"
     android:theme="@style/ThemeOverlay.KetymApp_M4D2.FullscreenContainer"
     tools:context=".FullscreenActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/fullscreenContent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/deep_purple"
-        android:fitsSystemWindows="true">
-
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_gravity="clip_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="108dp"
             android:background="@color/teal_700"
-            android:textColor="@color/deep_purple"
             android:gravity="center"
             android:text="@string/textView2"
+            android:textColor="@color/deep_purple"
             android:textSize="35sp"
             android:textStyle="italic"
-            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="585dp"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_gravity="clip_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:background="@color/purple_200"
-            android:textColor="@color/purple_700"
             android:gravity="center"
             android:text="@string/textView1"
+            android:textColor="@color/purple_700"
             android:textSize="35sp"
             android:textStyle="italic"
-            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="45dp"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/pokeball"
-            android:layout_width="242dp"
-            android:layout_height="280dp"
-            android:layout_gravity="center"
+            android:layout_width="229dp"
+            android:layout_height="294dp"
             android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,4 +54,3 @@
             app:srcCompat="@drawable/baseline_catching_pokemon_24" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>

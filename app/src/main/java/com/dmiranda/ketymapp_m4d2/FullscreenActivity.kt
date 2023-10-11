@@ -11,7 +11,10 @@ import android.view.View
 import android.view.WindowInsets
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.dmiranda.ketymapp_m4d2.databinding.ActivityFullscreenBinding
+
+
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -20,8 +23,7 @@ import com.dmiranda.ketymapp_m4d2.databinding.ActivityFullscreenBinding
 class FullscreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFullscreenBinding
-    private lateinit var fullscreenContent: TextView
-    private lateinit var fullscreenContentControls: LinearLayout
+    private lateinit var fullscreenContent: ConstraintLayout
     private val hideHandler = Handler(Looper.myLooper()!!)
 
     @SuppressLint("InlinedApi")
@@ -45,7 +47,8 @@ class FullscreenActivity : AppCompatActivity() {
     private val showPart2Runnable = Runnable {
         // Delayed display of UI elements
         supportActionBar?.show()
-        fullscreenContentControls.visibility = View.VISIBLE
+        val fullscreenContent = null
+        View.VISIBLE.also { fullscreenContent.visibility = it }
     }
     private var isFullscreen: Boolean = false
 
@@ -81,7 +84,7 @@ class FullscreenActivity : AppCompatActivity() {
         isFullscreen = true
 
         // Set up the user interaction to manually show or hide the system UI.
-        fullscreenContent = binding.FullscreenActivity
+        fullscreenContent = binding.fullscreenContent
         fullscreenContent.setOnClickListener { toggle() }
 
         fullscreenContentControls = binding.fullscreenContentControls
