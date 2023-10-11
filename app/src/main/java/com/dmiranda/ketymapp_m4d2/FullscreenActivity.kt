@@ -48,7 +48,7 @@ class FullscreenActivity : AppCompatActivity() {
         // Delayed display of UI elements
         supportActionBar?.show()
         val fullscreenContent = null
-        View.VISIBLE.also { fullscreenContent.visibility = it }
+      //  View.VISIBLE.also { fullscreenContent.visibility = it }
     }
     private var isFullscreen: Boolean = false
 
@@ -87,7 +87,7 @@ class FullscreenActivity : AppCompatActivity() {
         fullscreenContent = binding.fullscreenContent
         fullscreenContent.setOnClickListener { toggle() }
 
-        fullscreenContentControls = binding.fullscreenContentControls
+       // fullscreenContentControls = binding.fullscreenContentControls
 
     }
 
@@ -111,7 +111,7 @@ class FullscreenActivity : AppCompatActivity() {
     private fun hide() {
         // Hide UI first
         supportActionBar?.hide()
-        fullscreenContentControls.visibility = View.GONE
+      //  fullscreenContentControls.visibility = View.GONE
         isFullscreen = false
 
         // Schedule a runnable to remove the status and navigation bar after a delay
