@@ -9,8 +9,6 @@ import android.os.Looper
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowInsets
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.dmiranda.ketymapp_m4d2.databinding.ActivityFullscreenBinding
 
